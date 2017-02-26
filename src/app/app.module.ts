@@ -19,7 +19,6 @@ import { BooksModule } from './components/books/books.module'
         HttpModule,
         AppRoutingModule,
         SharedModule,
-        AlertModule.forRoot(),
 
         BooksModule
     ],
