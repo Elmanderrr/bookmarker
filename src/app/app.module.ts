@@ -18,7 +18,7 @@ import { BooksModule } from './components/books/books.module'
         FormsModule,
         HttpModule,
         AppRoutingModule,
-        SharedModule,
+        SharedModule.forRoot(),
 
         BooksModule
     ],
