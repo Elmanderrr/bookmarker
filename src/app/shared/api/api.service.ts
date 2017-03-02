@@ -9,10 +9,10 @@ export class API {
     constructor (
         private http:Http
     ) {
-        this.get()
+
     }
 
-    get (method:string) {
+    GET (method:string) {
         let headers = new Headers();
         headers.append("Authorization", "Basic " + btoa('test@gmail.com' + ":" + 'test'));
         headers.append("Content-Type", "application/x-www-form-urlencoded");

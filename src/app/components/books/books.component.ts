@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Http, Response, Headers } from '@angular/http';
 
-import { API } from './../../shared/api/api.service'
+import { BookAPI } from './../../shared/api/book/book.service'
 
 @Component({
     selector: 'app-books',
@@ -12,12 +12,13 @@ export class BooksComponent implements OnInit {
 
     constructor(
         private http:Http,
-        private API:API
+        private BookAPI:BookAPI
     ) {
     }
 
     ngOnInit() {
-        this.API.get('book')
+
+       this.BookAPI.getBooks()
             .subscribe(resp => {
                 console.log(resp)
             })

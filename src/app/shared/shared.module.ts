@@ -3,6 +3,7 @@ import { RouterModule } from '@angular/router';
 
 import { NavbarComponent } from './navbar/navbar.component'
 import { API } from './api/api.service'
+import { BookAPI } from './api/book/book.service'
 
 @NgModule({
     imports: [RouterModule],
@@ -13,7 +14,7 @@ export class SharedModule {
     static forRoot(): ModuleWithProviders {
         return {
             ngModule: SharedModule,
-            providers: [API]
+            providers: [API, BookAPI]
         };
     }
 }
