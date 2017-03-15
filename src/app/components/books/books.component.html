@@ -1,3 +1,16 @@
-<p>
-  books works!
-</p>
+<div class="panel panel-success">
+	<!-- Default panel contents -->
+	<div class="panel-heading">Books</div>
+	<div class="panel-body">
+	</div>
+
+	<!-- List group -->
+	<ul class="list-group">
+		<li class="list-group-item" *ngFor="let book of books; let i=index" (click)="click(book)">
+			<p>
+				{{i + 1}}) {{book.title}}
+			</p>
+		</li>
+	</ul>
+</div>
+

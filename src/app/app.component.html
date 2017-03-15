@@ -1,7 +1,23 @@
-<h1>
-  {{title}}
-</h1>
+<div class="container">
 
-<!--<app-books></app-books>-->
-<app-navbar></app-navbar>
-<router-outlet></router-outlet>
+	<div class="row">
+
+		<header>
+			<div class="col-md-12 m-t-md">
+				<app-navbar></app-navbar>
+			</div>
+		</header>
+
+		<main>
+			<div class="col-md-12 wrapper-lg">
+				<router-outlet></router-outlet>
+			</div>
+		</main>
+
+
+		<footer></footer>
+
+	</div>
+
+</div>
+

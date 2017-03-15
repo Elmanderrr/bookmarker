@@ -7,23 +7,27 @@ import { SharedModule } from './shared/shared.module'
 import { AlertModule } from 'ng2-bootstrap';
 
 import { AppComponent } from './app.component';
-import { BooksModule } from './components/books/books.module'
+import { BooksModule } from './components/books/books.module';
+import { EditBookComponent } from './components/edit-book/edit-book.component';
+import { AddBookModule } from './components/add-book/add-book.module';
 
 @NgModule({
-    declarations: [
-        AppComponent
-    ],
-    imports: [
-        BrowserModule,
-        FormsModule,
-        HttpModule,
-        AppRoutingModule,
-        SharedModule.forRoot(),
-
-        BooksModule
-    ],
-    providers: [],
-    bootstrap: [AppComponent]
+	declarations: [
+		AppComponent,
+		EditBookComponent
+	],
+	imports: [
+		BrowserModule,
+		FormsModule,
+		HttpModule,
+		AppRoutingModule,
+		SharedModule.forRoot(),
+		
+		BooksModule,
+		AddBookModule
+	],
+	providers: [],
+	bootstrap: [AppComponent]
 })
 export class AppModule {
 }

@@ -3,9 +3,10 @@ import { CommonModule } from '@angular/common';
 
 import { BooksComponent } from './books.component';
 import { BooksRoutingModule } from './books.routing';
+import { FormsModule } from "@angular/forms";
 
 @NgModule({
-    imports: [CommonModule, BooksRoutingModule],
+    imports: [CommonModule, BooksRoutingModule, FormsModule],
     declarations: [BooksComponent],
     exports: [BooksComponent]
 })
