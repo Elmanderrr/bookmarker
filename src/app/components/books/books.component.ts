@@ -1,6 +1,7 @@
 import { OnInit, Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
+import { Book } from '../../shared/api/book/book'
 import { BookAPI } from '../../shared/api/book/book.service'
 
 @Component({
@@ -16,19 +17,16 @@ export class BooksComponent implements OnInit {
 		private route:ActivatedRoute
 	) {}
 	
-	books:any[];
+	books: Book[];
 	newBook:any;
 	
 	ngOnInit() {
 		this.route.data.subscribe(({books}) => {
 			this.books = books;
-			
+			console.log(this)
 		})
 	}
 	
-	fileChange (e) {
-		this.newBook = e.target.files[0]
-	}
 	
 	reloadBooks() {
 		this.BookAPI.getBooks()

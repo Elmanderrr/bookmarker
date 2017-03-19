@@ -26,6 +26,17 @@ export class API {
 	
 	/**
 	 *
+	 * @returns {Headers}
+	 */
+	getPUTHeaders () {
+		let headers = new Headers();
+		headers.append("Authorization", this.auth);
+		headers.append('Content-Type', 'application/json');
+		return headers
+	}
+	
+	/**
+	 *
 	 * @param method
 	 * @returns {Observable<R>}
 	 * @constructor
@@ -39,6 +50,14 @@ export class API {
 		
 	}
 	
+	/**
+	 *
+	 * @param method
+	 * @param props
+	 * @param headers
+	 * @returns {Observable<R>}
+	 * @constructor
+	 */
 	POST(method: string, props: Object = {}, headers:Headers = this.getHeaders()) {
 		
 		return this.http.post(`${this.url}/${method}`, props, {
@@ -48,5 +67,19 @@ export class API {
 			.map((res: Response) => res.json());
 	}
 	
+	/**
+	 *
+	 * @param method
+	 * @param props
+	 * @returns {Observable<R>}
+	 * @constructor
+	 */
+	PUT(method: string, props: Object = {}) {
+		return this.http.put(`${this.url}/${method}`, props, {
+			headers: this.getPUTHeaders()
+		})
+	}
+	
+
 	
 }

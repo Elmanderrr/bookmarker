@@ -1,5 +1,8 @@
-import { API } from './../api.service'
+import { API } from '../api.service'
 import { Headers } from "@angular/http";
+import { Observable } from "rxjs";
+import { Book } from "./book";
+
 
 export class BookAPI extends API {
 	
@@ -7,8 +10,18 @@ export class BookAPI extends API {
 	 *
 	 * @returns {*}
 	 */
-	getBooks() {
+	getBooks(): Observable<Book[]> {
 		return this.GET('book')
+	}
+	
+	/**
+	 *
+	 * @param id
+	 * @param props
+	 * @returns {Observable<Response>}
+	 */
+	updateBook(id:number, props: Book) {
+		return this.PUT(`book/${id}`, props)
 	}
 	
 	/**

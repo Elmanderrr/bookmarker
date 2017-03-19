@@ -8,13 +8,12 @@ import { AlertModule } from 'ng2-bootstrap';
 
 import { AppComponent } from './app.component';
 import { BooksModule } from './components/books/books.module';
-import { EditBookComponent } from './components/edit-book/edit-book.component';
+import { EditBookModule } from './components/edit-book/edit-book.module';
 import { AddBookModule } from './components/add-book/add-book.module';
 
 @NgModule({
 	declarations: [
-		AppComponent,
-		EditBookComponent
+		AppComponent
 	],
 	imports: [
 		BrowserModule,
@@ -24,7 +23,8 @@ import { AddBookModule } from './components/add-book/add-book.module';
 		SharedModule.forRoot(),
 		
 		BooksModule,
-		AddBookModule
+		AddBookModule,
+		EditBookModule
 	],
 	providers: [],
 	bootstrap: [AppComponent]

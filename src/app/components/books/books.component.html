@@ -8,7 +8,10 @@
 	<ul class="list-group">
 		<li class="list-group-item" *ngFor="let book of books; let i=index" (click)="click(book)">
 			<p>
-				{{i + 1}}) {{book.title}}
+				{{i + 1}})
+				<a [routerLink]="['/book', book.id]">
+					{{book.title}}
+				</a>
 			</p>
 		</li>
 	</ul>
