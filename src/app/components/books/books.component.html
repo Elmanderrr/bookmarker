@@ -6,7 +6,7 @@
 
 	<!-- List group -->
 	<ul class="list-group">
-		<li class="list-group-item" *ngFor="let book of books; let i=index" (click)="click(book)">
+		<li class="list-group-item" *ngFor="let book of books; let i=index" >
 			<p>
 				{{i + 1}})
 				<a [routerLink]="['/book', book.id]">

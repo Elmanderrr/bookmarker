@@ -14,7 +14,9 @@ export class AddBookComponent implements OnInit {
 	) {
 	}
 	
+	
 	newBook: Book;
+	
 	uploadedBook: Book;
 	
 	
@@ -22,6 +24,10 @@ export class AddBookComponent implements OnInit {
 	}
 	
 	
+	/**
+	 *
+	 * @param e
+	 */
 	loadNewBook (e) {
 		e.preventDefault();
 		
@@ -32,10 +38,18 @@ export class AddBookComponent implements OnInit {
 		})
 	}
 	
+	/**
+	 *
+	 * @param e
+	 */
 	fileChange (e) {
 		this.newBook = e.target.files[0]
 	}
 	
+	/**
+	 *
+	 * @param id
+	 */
 	getBook (id:number) {
 		this.BookAPI.getBookById(id).subscribe((book: Book)=> {
 			this.uploadedBook = book;

@@ -18,34 +18,11 @@ export class BooksComponent implements OnInit {
 	) {}
 	
 	books: Book[];
-	newBook:any;
 	
 	ngOnInit() {
 		this.route.data.subscribe(({books}) => {
 			this.books = books;
 			console.log(this)
-		})
-	}
-	
-	
-	reloadBooks() {
-		this.BookAPI.getBooks()
-			.subscribe((books) => {
-				this.books = books;
-			})
-	}
-	
-	loadNewBook (e) {
-		e.preventDefault();
-		
-		this.BookAPI.loadBook({book: this.newBook}).subscribe(resp => {
-			this.reloadBooks()
-		})
-	}
-	
-	click (book) {
-		this.BookAPI.getBookById(book.id).subscribe(resp => {
-			console.log(resp)
 		})
 	}
 	
