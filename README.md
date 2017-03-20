@@ -1,7 +1,10 @@
 # BookmarkerFe
 git clone https://github.com/Elmanderrr/bookmarker
+
 npm install -g @angular/cli
+
 npm install
+
 ng serve
 
 ## Development server
