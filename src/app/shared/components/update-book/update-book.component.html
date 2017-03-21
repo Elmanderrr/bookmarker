@@ -5,9 +5,7 @@
 	</div>
 	<div class="form-group">
 		<label>Year</label>
-		<select class="form-control" name="years" type="number" [(ngModel)]="book.year" >
-			<option *ngFor="let year of years" [ngValue]="year">{{year}}</option>
-		</select>
+		<input type="number" autocomplete="off" name="author" [(ngModel)]="book.year" class="form-control">
 	</div>
 	<div class="form-group">
 		<label>Description:</label>
@@ -17,5 +15,3 @@
 	</div>
 	<button type="submit" class="btn btn-default">Submit</button>
 </form>
-
-

@@ -13,8 +13,6 @@ export class UpdateBookComponent implements OnInit {
 
 	@Input() book: Book;
 	
-	years: number[] = _.range(1900, 2018).reverse();
-	
 	constructor (
 		private BookAPI: BookAPI
 	) {
