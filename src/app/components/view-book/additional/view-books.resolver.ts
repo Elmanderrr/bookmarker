@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
-import { Resolve, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
+import { Resolve, ActivatedRouteSnapshot } from '@angular/router';
 import { Observable } from 'rxjs/Rx';
 import { BookAPI } from '../../../shared/api/book/book.service';
-import { Book } from "../../../shared/api/book/book";
+import { Book } from "../../../shared/models/book";
 
 @Injectable()
-export class EditBookResolver implements Resolve<any> {
+export class ViewBookResolver implements Resolve<any> {
 	constructor (
 		private BookAPI: BookAPI
 	) {}

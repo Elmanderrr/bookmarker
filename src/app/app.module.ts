@@ -8,12 +8,12 @@ import { AlertModule } from 'ng2-bootstrap';
 
 import { AppComponent } from './app.component';
 import { BooksModule } from './components/books/books.module';
-import { EditBookModule } from './components/edit-book/edit-book.module';
+import { EditBookModule } from './components/view-book/view-book.module';
 import { AddBookModule } from './components/add-book/add-book.module';
 
 @NgModule({
 	declarations: [
-		AppComponent
+		AppComponent,
 	],
 	imports: [
 		BrowserModule,

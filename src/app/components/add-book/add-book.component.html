@@ -26,19 +26,7 @@
 	<div class="panel panel-success">
 		<div class="panel-heading">Correct book if needed</div>
 		<div class="panel-body">
-			<form #bookForm="ngForm" (ngSubmit)="editBook($event, bookForm)">
-				<div class="form-group">
-					<label>Title</label>
-					<input type="text" name="title" [(ngModel)]="uploadedBook.title" class="form-control">
-				</div>
-				<div class="form-group">
-					<label>Description:</label>
-					<textarea type="text" name="description"  class="form-control" rows="10"
-							  [(ngModel)]="uploadedBook.description" >
-					</textarea>
-				</div>
-				<button type="submit" class="btn btn-default">Submit</button>
-			</form>
+			<app-update-book [book]="uploadedBook"></app-update-book>
 		</div>
 	</div>
 </div>

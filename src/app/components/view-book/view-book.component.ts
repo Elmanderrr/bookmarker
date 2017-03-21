@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from "@angular/router";
-import { Book } from "../../shared/api/book/book";
+import { Book } from "../../shared/models/book";
 
 @Component({
-	selector: 'app-edit-book',
-	templateUrl: './edit-book.component.html',
-	styleUrls: ['./edit-book.component.css']
+	selector: 'app-view-book',
+	templateUrl: 'view-book.component.html',
+	styleUrls: ['view-book.component.css']
 })
-export class EditBookComponent implements OnInit {
+export class ViewBookComponent implements OnInit {
 	
 	constructor (
 		private route:ActivatedRoute

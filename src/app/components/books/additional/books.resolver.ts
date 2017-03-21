@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Resolve, ActivatedRouteSnapshot } from '@angular/router';
 import { Observable } from 'rxjs/Rx';
 import { BookAPI } from '../../../shared/api/book/book.service';
-import { Book } from "../../../shared/api/book/book";
+import { Book } from "../../../shared/models/book";
 
 @Injectable()
 export class BookResolver implements Resolve<any> {

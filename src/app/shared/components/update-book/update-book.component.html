@@ -1,0 +1,21 @@
+<form #bookForm="ngForm" (ngSubmit)="editBook($event, bookForm)">
+	<div class="form-group">
+		<label>Title</label>
+		<input type="text" name="title" [(ngModel)]="book.title" class="form-control">
+	</div>
+	<div class="form-group">
+		<label>Year</label>
+		<select class="form-control" name="years" type="number" [(ngModel)]="book.year" >
+			<option *ngFor="let year of years" [ngValue]="year">{{year}}</option>
+		</select>
+	</div>
+	<div class="form-group">
+		<label>Description:</label>
+		<textarea type="text" name="description"  class="form-control" rows="10"
+				  [(ngModel)]="book.description" >
+					</textarea>
+	</div>
+	<button type="submit" class="btn btn-default">Submit</button>
+</form>
+
+

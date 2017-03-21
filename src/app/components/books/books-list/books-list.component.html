@@ -1,0 +1,23 @@
+
+
+<div class="table-responsive">
+	<table class="table table-bordered table-hover">
+		<thead>
+		<tr>
+			<th class="text-center" width="5%">№</th>
+			<th>Name</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr *ngFor="let book of books; let i = index;">
+			<td class="text-center"> {{i + 1}}</td>
+			<td>
+				<a [routerLink]="['/book', book.id]">
+					{{book.title}}
+				</a>
+			</td>
+		</tr>
+		</tbody>
+	</table>
+</div>
+

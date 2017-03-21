@@ -3,6 +3,7 @@ import {Http, Response, Headers} from '@angular/http';
 import { environment as env } from '../../../environments/environment'
 
 import 'rxjs/add/operator/map';
+import { Book } from "../models/book";
 
 @Injectable()
 export class API {
@@ -75,7 +76,7 @@ export class API {
 	 * @returns {Observable<R>}
 	 * @constructor
 	 */
-	PUT(method: string, props: Object = {}) {
+	PUT(method: string, props: Book) {
 		return this.http.put(`${this.url}/${method}`, props, {
 			headers: this.getPUTHeaders()
 		})

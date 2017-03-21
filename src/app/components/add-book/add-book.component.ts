@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BookAPI } from "../../shared/api/book/book.service";
-import { Book } from "../../shared/api/book/book";
+import { Book } from "../../shared/models/book";
 
 @Component({
 	selector: 'app-add-book',
@@ -16,7 +16,6 @@ export class AddBookComponent implements OnInit {
 	
 	
 	newBook: Book;
-	
 	uploadedBook: Book;
 	
 	
@@ -56,14 +55,4 @@ export class AddBookComponent implements OnInit {
 		})
 	}
 	
-	editBook () {
-		const {id, title, description} = this.uploadedBook;
-		
-		this.BookAPI.updateBook(id, {
-			title,
-			description
-		}).subscribe(resp => {
-			console.log(resp)
-		})
-	}
 }
