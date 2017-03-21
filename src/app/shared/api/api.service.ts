@@ -76,7 +76,7 @@ export class API {
 	 * @returns {Observable<R>}
 	 * @constructor
 	 */
-	PUT(method: string, props: Book) {
+	PUT(method: string, props) {
 		return this.http.put(`${this.url}/${method}`, props, {
 			headers: this.getPUTHeaders()
 		})
