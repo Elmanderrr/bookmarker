@@ -1,5 +1,6 @@
 import {Injectable} from '@angular/core';
 import {Http, Response, Headers} from '@angular/http';
+import { environment as env } from '../../../environments/environment'
 
 import 'rxjs/add/operator/map';
 
@@ -10,8 +11,8 @@ export class API {
 	}
 	
 	
-	url: string = 'http://localhost:82';
-	auth: string = `Basic ${btoa('test@gmail.com:test')}`;
+	url: string = env.API;
+	auth: string = `Basic ${btoa(env['test-creds'])}`;
 	
 	/**
 	 *
